@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import vad.adler.sampleapp.view.MakeNewsApiCall
+import vad.adler.sampleapp.newsapi.model.ui.MakeNewsApiCall
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
