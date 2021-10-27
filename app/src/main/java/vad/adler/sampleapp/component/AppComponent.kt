@@ -1,7 +1,14 @@
 package vad.adler.sampleapp.component
 
-import vad.adler.sampleapp.newsapi.model.ui.MakeNewsApiCall
+import dagger.Component
+import vad.adler.sampleapp.newsapi.ui.MakeNewsApiCall
 
-interface AppComponent {
+// Definition of the Application graph.
+
+@Component
+interface ApplicationComponent {
+    // Tell Dagger that MakeNewsApiCall activity requests injection so the graph needs to
+    // satisfy all the dependencies of the fields that MakeNewsApiCall activity is requesting.
+    // This function tells Dagger that MakeNewsApiCall wants to access the graph and requests injection.
     fun inject(activity: MakeNewsApiCall)
 }
