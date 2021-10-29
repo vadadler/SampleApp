@@ -10,7 +10,7 @@ import javax.inject.Inject
 class MakeNewsApiCallActivity : AppCompatActivity() {
     // Dagger to provide an instance of MakeNewsApiCallViewModel from the graph.
     @Inject
-    lateinit var loginViewModel: MakeNewsApiCallViewModel
+    lateinit var newsAPIViewModel: MakeNewsApiCallViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Toast.makeText(applicationContext, getString(R.string.get_news), Toast.LENGTH_LONG).show()
@@ -19,7 +19,7 @@ class MakeNewsApiCallActivity : AppCompatActivity() {
         (application as MyApplication).appComponent.inject(this)
         // Now MakeNewsApiCallViewModel is available.
 
-//        loginViewModel =
+        newsAPIViewModel.
 
         super.onCreate(savedInstanceState)
 
