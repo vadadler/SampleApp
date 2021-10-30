@@ -8,7 +8,6 @@ import retrofit2.http.Query
 interface NewsService {
     @GET("v2/everything")
     suspend fun getNews(@Query("q") query: String,
-                             @Query("sortBy") sortBy: String):  NewsServiceResponse
+                        @Query("sortBy") sortBy: String):  NewsServiceResponse
 
-    val newsApi: NewsApiInterface = getRetrofit().create(NewsApiInterface::class.java)
 }

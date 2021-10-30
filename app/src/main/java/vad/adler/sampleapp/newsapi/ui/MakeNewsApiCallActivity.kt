@@ -19,7 +19,7 @@ class MakeNewsApiCallActivity : AppCompatActivity() {
         (application as MyApplication).appComponent.inject(this)
         // Now MakeNewsApiCallViewModel is available.
 
-        newsAPIViewModel.
+        newsAPIViewModel.getLatestNews("Tesla", "publishedAt")
 
         super.onCreate(savedInstanceState)
 
