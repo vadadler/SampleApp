@@ -1,5 +1,6 @@
 package vad.adler.sampleapp.newsapi.module
 
+import android.content.Context
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -11,13 +12,14 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import vad.adler.sampleapp.newsapi.repository.NEWS_API_KEY
 import vad.adler.sampleapp.newsapi.repository.NEWS_API_URL
 import vad.adler.sampleapp.newsapi.repository.NewsService
+import vad.adler.sampleapp.newsapi.repository.NewsServiceRepository
 import javax.inject.Singleton
 
 @Module
 class NewsApiModule {
     @Singleton
     @Provides
-    private fun provideMoshi(): Moshi {
+    open fun provideMoshi(): Moshi {
         return Moshi
             .Builder()
             .add(KotlinJsonAdapterFactory())
@@ -48,5 +50,13 @@ class NewsApiModule {
             .client(apiClient)
             .build()
             .create(NewsService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideNewsServiceRepository( newsService: NewsService,
+                                      moshi: Moshi,
+                                      context: Context): NewsServiceRepository {
+        return NewsServiceRepository(newsService, moshi, context)
     }
 }
