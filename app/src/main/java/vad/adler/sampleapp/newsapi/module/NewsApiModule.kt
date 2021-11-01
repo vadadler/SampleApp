@@ -1,12 +1,15 @@
 package vad.adler.sampleapp.newsapi.module
 
+import android.app.Application
 import android.content.Context
+import android.util.Log
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import vad.adler.sampleapp.newsapi.repository.NEWS_API_KEY
@@ -36,8 +39,23 @@ class NewsApiModule {
         chain.proceed(request)
     }
 
-    // we are creating a networking client using OkHttp and add our authInterceptor.
-    private val apiClient = OkHttpClient().newBuilder().addInterceptor(interceptor).build()
+    private fun loggingInterceptor():HttpLoggingInterceptor {
+        val logger = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger {
+            Log.d("OkHttp: ", it)
+        })
+
+        logger.level = HttpLoggingInterceptor.Level.BODY
+        return logger
+//        HttpLoggingInterceptor().also {
+//            it.level = HttpLoggingInterceptor.Level.BASIC
+//        }
+    }
+
+    private val apiClient = OkHttpClient()
+        .newBuilder()
+        .addInterceptor(interceptor)
+        .addInterceptor(loggingInterceptor())
+        .build()
 
     @Provides
     @Singleton
