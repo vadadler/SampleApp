@@ -46,9 +46,6 @@ class NewsApiModule {
 
         logger.level = HttpLoggingInterceptor.Level.BODY
         return logger
-//        HttpLoggingInterceptor().also {
-//            it.level = HttpLoggingInterceptor.Level.BASIC
-//        }
     }
 
     private val apiClient = OkHttpClient()

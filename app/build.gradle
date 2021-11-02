@@ -56,6 +56,10 @@ dependencies {
     def material_design_version = "1.4.0"
     def dagger_version = "2.38.1"
     def arrow_version = "1.0.0"
+    def timber_version = "5.0.1"
+
+    // Timber.
+    implementation "com.jakewharton.timber:timber:$timber_version"
 
     //Moshi. https://github.com/square/moshi
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"

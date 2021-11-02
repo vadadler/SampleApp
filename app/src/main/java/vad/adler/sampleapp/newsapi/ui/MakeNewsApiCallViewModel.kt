@@ -17,7 +17,6 @@ class MakeNewsApiCallViewModel @Inject constructor(): ViewModel() {
     private val parentJob = Job()
     private val coroutineContext : CoroutineContext get() = parentJob + Dispatchers.Default
     private val scope = CoroutineScope(coroutineContext)
-    //private val newsRepository : NewsServiceRepository = NewsServiceRepository(NewsService.getNews())
     val newsLiveData = MutableLiveData<MutableList<NewsServiceResponse.Article>>()
 
 

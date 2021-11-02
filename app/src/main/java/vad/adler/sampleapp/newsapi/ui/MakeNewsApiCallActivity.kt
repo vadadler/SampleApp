@@ -13,8 +13,6 @@ class MakeNewsApiCallActivity : AppCompatActivity() {
     lateinit var newsAPIViewModel: MakeNewsApiCallViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Toast.makeText(applicationContext, getString(R.string.get_news), Toast.LENGTH_LONG).show()
-
         // Make Dagger instantiate @Inject fields in MakeNewsApiCall activity.
         (application as MyApplication).appComponent.inject(this)
         // Now MakeNewsApiCallViewModel is available.
