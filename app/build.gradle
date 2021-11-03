@@ -63,6 +63,7 @@ dependencies {
 
     //Moshi. https://github.com/square/moshi
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    implementation "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
 
     //Retrofit2. https://github.com/square/retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"

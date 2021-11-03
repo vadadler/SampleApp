@@ -4,6 +4,8 @@ import android.app.Application
 import vad.adler.sampleapp.component.AppComponent
 import vad.adler.sampleapp.component.DaggerAppComponent
 
+import timber.log.Timber
+
 class MyApplication: Application() {
     // appComponent lives in the Application class to share its lifecycle.
     // Reference to the application graph that is used across the whole app
@@ -20,6 +22,11 @@ class MyApplication: Application() {
         return DaggerAppComponent.factory().create(applicationContext)
     }
 
-
+    override fun onCreate() {
+        super.onCreate()
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
+    }
 }
 
