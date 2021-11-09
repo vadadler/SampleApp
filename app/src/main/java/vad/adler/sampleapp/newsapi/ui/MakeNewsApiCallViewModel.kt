@@ -19,7 +19,6 @@ class MakeNewsApiCallViewModel @Inject constructor(): ViewModel() {
     private val scope = CoroutineScope(coroutineContext)
     val newsLiveData = MutableLiveData<MutableList<NewsServiceResponse.Article>>()
 
-
     fun getLatestNews(query: String, sortBy: String) {
         scope.launch {
             val latestNews = newsRepository.getNews(query, sortBy)

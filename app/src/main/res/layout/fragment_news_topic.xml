@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsTopicFragment">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/newsTopicLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/news_topic_label"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="32dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/newsTopicLabel"
+        android:orientation="horizontal"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp">
+
+        <EditText
+            android:id="@+id/newsTopic"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="makeNewsApiCall"
+            android:text="@string/search_news"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</RelativeLayout>
+</FrameLayout>
