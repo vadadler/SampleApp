@@ -5,16 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/news_topic">
 
-    <fragment android:id="@+id/news_topic" >
+    <fragment android:id="@+id/news_topic"
+        tools:layout="@layout/fragment_news_topic">
+
         <action
             android:id="@+id/action_news_topic_to_news_list"
-            tools:layout="@layout/fragment_news_topic"
             app:destination="@id/news_list" />
     </fragment>
-    <fragment android:id="@+id/news_list" >
+
+    <fragment android:id="@+id/news_list"
+        tools:layout="@layout/fragment_news_list">
+        
         <action
             android:id="@+id/action_news_list_to_news_detail"
             app:destination="@id/news_detail" />
     </fragment>
-    <fragment android:id="@+id/news_detail" />
+
+    <fragment android:id="@+id/news_detail"
+        tools:layout="@layout/fragment_news_detail"/>
 </navigation>
