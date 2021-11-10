@@ -19,7 +19,7 @@ class MakeNewsApiCallActivity : AppCompatActivity() {
 
         setContentView(R.layout.make_news_api_call_activity)
 
-        newsAPIViewModel.getLatestNews("Tesla", "publishedAt")
+        //newsAPIViewModel.getLatestNews("Tesla", "publishedAt")
 
         super.onCreate(savedInstanceState)
 
