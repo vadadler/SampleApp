@@ -29,6 +29,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    dataBinding {
+        enabled true
+    }
+
 }
 
 apply plugin: 'com.android.application'
@@ -136,7 +141,4 @@ dependencies {
 
     // Testing Navigation
     androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
-
-    // Jetpack Compose Integration
-    implementation("androidx.navigation:navigation-compose:2.4.0-beta02")
 }

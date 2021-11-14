@@ -18,6 +18,6 @@
             android:layout_height="wrap_content"
             android:onClick="makeNewsApiCall"
             android:text="@string/get_news"
-            android:textColor="@android:color/white" />
+            android:textColor="@color/white" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:onClick="makeNewsApiCall"
             android:text="@string/search_news"
-            android:textColor="@android:color/white" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
 </RelativeLayout>

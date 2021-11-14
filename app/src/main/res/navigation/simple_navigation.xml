@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/newsTopic">
+    android:id="@+id/simple_navigation"
+    app:startDestination="@id/homeFragment">
 
-    <fragment android:id="@+id/newsTopic"
-        android:name="vad.adler.sampleapp.NewsTopicFragment"
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="vad.adler.sampleapp.view.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_news_topic">
+        tools:layout="@layout/fragment_news_topic" >
     </fragment>
-
 </navigation>

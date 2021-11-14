@@ -15,7 +15,6 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/simple_navigation" />
 
-
     </FrameLayout>
 
 </layout>
