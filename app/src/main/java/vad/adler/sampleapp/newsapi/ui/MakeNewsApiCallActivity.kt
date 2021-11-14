@@ -3,6 +3,9 @@ package vad.adler.sampleapp.newsapi.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
 import vad.adler.sampleapp.MyApplication
 import vad.adler.sampleapp.R
 import javax.inject.Inject
@@ -14,6 +17,7 @@ class MakeNewsApiCallActivity : AppCompatActivity() {
     lateinit var newsAPIViewModel: MakeNewsApiCallViewModel
 
     private lateinit var binding: MakeNewsApiCallActivityBinding
+    lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +28,9 @@ class MakeNewsApiCallActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.make_news_api_call_activity)
 
+        navController = Navigation.findNavController(this, R.id.navFragment)
+        NavigationUI.setupActionBarWithNavController(this, navController)
+
         //newsAPIViewModel.getLatestNews("Tesla", "publishedAt")
-
-
-
     }
 }

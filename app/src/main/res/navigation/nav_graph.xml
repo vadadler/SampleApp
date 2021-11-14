@@ -7,8 +7,12 @@
 
     <fragment android:id="@+id/newsTopic"
         android:name="vad.adler.sampleapp.NewsTopicFragment"
-        android:label="fragment_home"
+        android:label="@string/news_topic_fragment"
         tools:layout="@layout/fragment_news_topic">
+
+        <action
+            android:id="@+id/action_news_topic_to_news_list"
+            app:destination="@id/news_list" />
     </fragment>
 
     <fragment android:id="@+id/news_list"

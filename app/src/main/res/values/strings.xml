@@ -3,4 +3,5 @@
     <string name="get_news">Make NewsAPI call</string>
     <string name="news_topic_label">What do you want to get news about?</string>
     <string name="search_news">Get</string>
+    <string name="news_topic_fragment">News topic</string>
 </resources>
