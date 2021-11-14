@@ -11,4 +11,14 @@
         tools:layout="@layout/fragment_news_topic">
     </fragment>
 
+    <fragment android:id="@+id/news_list"
+        tools:layout="@layout/fragment_news_list">
+
+        <action
+            android:id="@+id/action_news_list_to_news_detail"
+            app:destination="@id/news_detail" />
+    </fragment>
+
+    <fragment android:id="@+id/news_detail"
+        tools:layout="@layout/fragment_news_detail"/>
 </navigation>

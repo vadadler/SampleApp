@@ -22,8 +22,7 @@ class MakeNewsApiCallActivity : AppCompatActivity() {
         (application as MyApplication).appComponent.inject(this)
         // Now MakeNewsApiCallViewModel is available.
 
-        DataBindingUtil.setContentView(this, R.layout.make_news_api_call_activity)
-//        setContentView(this, R.layout.activity_main3)
+        binding = DataBindingUtil.setContentView(this, R.layout.make_news_api_call_activity)
 
         //newsAPIViewModel.getLatestNews("Tesla", "publishedAt")
 
