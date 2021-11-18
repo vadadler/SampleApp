@@ -18,8 +18,7 @@ class NewsListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentNewsListBinding.inflate(inflater, container, false)
-        val view: View = binding.root
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
