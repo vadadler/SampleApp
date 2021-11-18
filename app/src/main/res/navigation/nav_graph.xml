@@ -16,6 +16,7 @@
     </fragment>
 
     <fragment android:id="@+id/news_list"
+        android:name="vad.adler.sampleapp.view.NewsListFragment"
         tools:layout="@layout/fragment_news_list">
 
         <action

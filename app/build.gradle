@@ -34,6 +34,9 @@ android {
         enabled true
     }
 
+    viewBinding {
+        enabled true
+    }
 }
 
 apply plugin: 'com.android.application'
