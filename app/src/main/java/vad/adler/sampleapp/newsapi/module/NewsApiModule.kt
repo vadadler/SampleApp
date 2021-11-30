@@ -1,6 +1,5 @@
 package vad.adler.sampleapp.newsapi.module
 
-import android.app.Application
 import android.content.Context
 import android.util.Log
 import com.squareup.moshi.Moshi
@@ -12,10 +11,10 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import vad.adler.sampleapp.newsapi.repository.NEWS_API_KEY
-import vad.adler.sampleapp.newsapi.repository.NEWS_API_URL
-import vad.adler.sampleapp.newsapi.repository.NewsService
-import vad.adler.sampleapp.newsapi.repository.NewsServiceRepository
+import vad.adler.sampleapp.newsapi.model.NEWS_API_KEY
+import vad.adler.sampleapp.newsapi.model.NEWS_API_URL
+import vad.adler.sampleapp.newsapi.model.api.NewsService
+import vad.adler.sampleapp.newsapi.model.NewsServiceRepository
 import javax.inject.Singleton
 
 @Module
@@ -69,9 +68,9 @@ class NewsApiModule {
 
     @Provides
     @Singleton
-    fun provideNewsServiceRepository( newsService: NewsService,
-                                      moshi: Moshi,
-                                      context: Context): NewsServiceRepository {
+    fun provideNewsServiceRepository(newsService: NewsService,
+                                     moshi: Moshi,
+                                     context: Context): NewsServiceRepository {
         return NewsServiceRepository(newsService, moshi, context)
     }
 }

@@ -1,4 +1,4 @@
-package vad.adler.sampleapp.view
+package vad.adler.sampleapp.newsapi.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,7 +22,7 @@ class NewsListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        recyclerView = binding.recyclerView
+        recyclerView = binding.newsRecyclerView
 //        chooseLayout()
     }
 }

@@ -1,4 +1,4 @@
-package vad.adler.sampleapp.newsapi.ui
+package vad.adler.sampleapp.newsapi.view.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

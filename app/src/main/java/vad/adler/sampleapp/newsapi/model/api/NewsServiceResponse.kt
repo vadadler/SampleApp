@@ -1,4 +1,4 @@
-package vad.adler.sampleapp.newsapi.repository
+package vad.adler.sampleapp.newsapi.model.api
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

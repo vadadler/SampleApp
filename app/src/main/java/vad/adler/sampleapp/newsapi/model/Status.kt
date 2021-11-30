@@ -1,4 +1,4 @@
-package vad.adler.sampleapp.newsapi.repository
+package vad.adler.sampleapp.newsapi.model
 
 import java.lang.Exception
 

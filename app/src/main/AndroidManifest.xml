@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SampleApp">
         <activity
-            android:name=".newsapi.ui.MakeNewsApiCallActivity"
+            android:name="vad.adler.sampleapp.newsapi.view.ui.MakeNewsApiCallActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -1,11 +1,9 @@
-package vad.adler.sampleapp.newsapi.repository
+package vad.adler.sampleapp.newsapi.model
 
 import android.content.Context
 import com.squareup.moshi.Moshi
 import timber.log.Timber
 import java.io.File
-import java.security.AccessControlContext
-import javax.inject.Inject
 
 // Save JSON to file.
 inline fun <reified T> T.saveAsJsonFile(context: Context) {

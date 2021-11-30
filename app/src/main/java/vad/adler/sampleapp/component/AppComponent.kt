@@ -4,7 +4,7 @@ import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
 import vad.adler.sampleapp.newsapi.module.NewsApiModule
-import vad.adler.sampleapp.newsapi.ui.MakeNewsApiCallActivity
+import vad.adler.sampleapp.newsapi.view.ui.MakeNewsApiCallActivity
 import javax.inject.Singleton
 
 // Definition of the Application graph.

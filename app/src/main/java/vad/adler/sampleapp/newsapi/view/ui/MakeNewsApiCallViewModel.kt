@@ -1,12 +1,10 @@
-package vad.adler.sampleapp.newsapi.ui
+package vad.adler.sampleapp.newsapi.view.ui
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.*
-import vad.adler.sampleapp.newsapi.repository.NewsService
-import vad.adler.sampleapp.newsapi.repository.NewsServiceRepository
-import vad.adler.sampleapp.newsapi.repository.NewsServiceResponse
+import vad.adler.sampleapp.newsapi.model.NewsServiceRepository
+import vad.adler.sampleapp.newsapi.model.api.NewsServiceResponse
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
