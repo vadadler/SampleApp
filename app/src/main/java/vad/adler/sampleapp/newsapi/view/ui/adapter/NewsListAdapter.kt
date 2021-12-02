@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import vad.adler.sampleapp.databinding.NewsListItemBinding
 import vad.adler.sampleapp.newsapi.model.NewsServiceResponse
-import vad.adler.sampleapp.newsapi.view.ui.NewsListViewModel
+import vad.adler.sampleapp.newsapi.view.ui.NewsViewModel
 import vad.adler.sampleapp.newsapi.view.ui.adapter.viewholders.NewsListViewHolder
 
-class NewsListAdapter(private val newsListViewModel: NewsListViewModel) : RecyclerView.Adapter<NewsListViewHolder>() {
+class NewsListAdapter(private val newsListViewModel: NewsViewModel) : RecyclerView.Adapter<NewsListViewHolder>() {
     var newsList: List<NewsServiceResponse.Article> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsListViewHolder {
@@ -23,8 +23,8 @@ class NewsListAdapter(private val newsListViewModel: NewsListViewModel) : Recycl
         holder.setup(newsList[position])
     }
 
-    fun updateRepoList(repoList: List<Item>) {
-        this.repoList = repoList
+    fun updateRepoList(newsList: List<NewsServiceResponse.Article>) {
+        this.newsList = newsList
         notifyDataSetChanged()
     }
 }

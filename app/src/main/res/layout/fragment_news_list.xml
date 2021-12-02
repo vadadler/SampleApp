@@ -6,7 +6,7 @@
 
         <variable
             name="viewmodel"
-            type="vad.adler.sampleapp.newsapi.view.ui.MakeNewsApiCallViewModel" />
+            type="vad.adler.sampleapp.newsapi.view.ui.NewsViewModel" />
     </data>
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"

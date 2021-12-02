@@ -14,7 +14,7 @@ import vad.adler.sampleapp.databinding.MakeNewsApiCallActivityBinding
 class GetNewsActivity : AppCompatActivity() {
     // Dagger to provide an instance of MakeNewsApiCallViewModel from the graph.
     @Inject
-    lateinit var newsAPIViewModel: MakeNewsApiCallViewModel
+    lateinit var newsAPIViewModel: NewsViewModel
 
     private lateinit var binding: MakeNewsApiCallActivityBinding
     lateinit var navController: NavController

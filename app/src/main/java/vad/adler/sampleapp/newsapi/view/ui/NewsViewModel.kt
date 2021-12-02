@@ -8,7 +8,7 @@ import vad.adler.sampleapp.newsapi.model.NewsServiceResponse
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
-class NewsListViewModel @Inject constructor(): ViewModel() {
+class NewsViewModel @Inject constructor(): ViewModel() {
     @Inject
     lateinit var newsRepository: NewsServiceRepository
 

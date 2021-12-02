@@ -1,14 +1,13 @@
 package vad.adler.sampleapp.newsapi.view.ui.adapter.viewholders
 
 import androidx.databinding.ViewDataBinding
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.news_list_item.view.*
 import vad.adler.sampleapp.newsapi.model.NewsServiceResponse
-import vad.adler.sampleapp.newsapi.view.ui.NewsListViewModel
+import vad.adler.sampleapp.newsapi.view.ui.NewsViewModel
 
-class NewsListViewHolder constructor(private val dataBinding: ViewDataBinding, private val newsListViewModel: NewsListViewModel)
+class NewsListViewHolder constructor(private val dataBinding: ViewDataBinding, private val newsListViewModel: NewsViewModel)
     : RecyclerView.ViewHolder(dataBinding.root) {
 
     val newsItemImage = itemView.newsItemImage

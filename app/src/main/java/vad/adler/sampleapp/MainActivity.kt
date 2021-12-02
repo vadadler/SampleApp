@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import vad.adler.sampleapp.newsapi.view.ui.GetNewsActivity
-import vad.adler.sampleapp.newsapi.view.ui.MakeNewsApiCallViewModel
+import vad.adler.sampleapp.newsapi.view.ui.NewsViewModel
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
     @Inject
-    lateinit var loginViewModel: MakeNewsApiCallViewModel
+    lateinit var newsViewModel: NewsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
