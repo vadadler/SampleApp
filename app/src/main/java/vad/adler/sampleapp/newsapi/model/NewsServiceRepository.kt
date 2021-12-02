@@ -4,7 +4,6 @@ import android.content.Context
 import arrow.core.Either
 import com.squareup.moshi.Moshi
 import vad.adler.sampleapp.newsapi.model.api.NewsService
-import vad.adler.sampleapp.newsapi.model.api.NewsServiceResponse
 
 open class NewsServiceRepository(
     private val newsService: NewsService,

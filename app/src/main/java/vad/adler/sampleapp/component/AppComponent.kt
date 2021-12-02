@@ -4,7 +4,7 @@ import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
 import vad.adler.sampleapp.newsapi.module.NewsApiModule
-import vad.adler.sampleapp.newsapi.view.ui.MakeNewsApiCallActivity
+import vad.adler.sampleapp.newsapi.view.ui.GetNewsActivity
 import javax.inject.Singleton
 
 // Definition of the Application graph.
@@ -28,5 +28,5 @@ interface AppComponent {
     }
 
     // Classes that can be injected by this Component.
-    fun inject(activity: MakeNewsApiCallActivity)
+    fun inject(activity: GetNewsActivity)
 }

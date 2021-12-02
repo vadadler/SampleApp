@@ -67,6 +67,7 @@ dependencies {
     def arrow_version = "1.0.0"
     def timber_version = "5.0.1"
     def nav_version = "2.3.5"
+    def picasso_version = "2.71828"
 
     // Timber.
     implementation "com.jakewharton.timber:timber:$timber_version"
@@ -144,4 +145,7 @@ dependencies {
 
     // Testing Navigation
     androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+
+    // Picasso
+    implementation("com.squareup.picasso:picasso:$picasso_version")
 }

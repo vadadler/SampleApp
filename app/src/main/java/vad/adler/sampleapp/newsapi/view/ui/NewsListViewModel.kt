@@ -4,11 +4,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.*
 import vad.adler.sampleapp.newsapi.model.NewsServiceRepository
-import vad.adler.sampleapp.newsapi.model.api.NewsServiceResponse
+import vad.adler.sampleapp.newsapi.model.NewsServiceResponse
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
-class MakeNewsApiCallViewModel @Inject constructor(): ViewModel() {
+class NewsListViewModel @Inject constructor(): ViewModel() {
     @Inject
     lateinit var newsRepository: NewsServiceRepository
 

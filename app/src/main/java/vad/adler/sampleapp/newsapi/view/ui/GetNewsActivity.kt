@@ -11,7 +11,7 @@ import vad.adler.sampleapp.R
 import javax.inject.Inject
 import vad.adler.sampleapp.databinding.MakeNewsApiCallActivityBinding
 
-class MakeNewsApiCallActivity : AppCompatActivity() {
+class GetNewsActivity : AppCompatActivity() {
     // Dagger to provide an instance of MakeNewsApiCallViewModel from the graph.
     @Inject
     lateinit var newsAPIViewModel: MakeNewsApiCallViewModel

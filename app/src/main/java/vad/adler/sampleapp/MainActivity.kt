@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import vad.adler.sampleapp.newsapi.view.ui.MakeNewsApiCallActivity
+import vad.adler.sampleapp.newsapi.view.ui.GetNewsActivity
 import vad.adler.sampleapp.newsapi.view.ui.MakeNewsApiCallViewModel
 import javax.inject.Inject
 
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun makeNewsApiCall(view: View) {
-        startActivity(Intent(this@MainActivity, MakeNewsApiCallActivity::class.java))
+        startActivity(Intent(this@MainActivity, GetNewsActivity::class.java))
     }
 
 }
