@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import vad.adler.sampleapp.databinding.FragmentNewsListBinding
+import vad.adler.sampleapp.newsapi.view.ui.adapter.NewsListAdapter
 
 class NewsListFragment : Fragment() {
     private lateinit var binding: FragmentNewsListBinding
     private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: NewsListAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,6 +25,9 @@ class NewsListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = binding.newsRecyclerView
-//        chooseLayout()
+        with(binding) {
+            adapter = NewsListAdapter(binding.viewmodel)
+            newsRecyclerView.adapter = adapter
+        }
     }
 }
