@@ -8,7 +8,7 @@ import vad.adler.sampleapp.databinding.NewsListItemBinding
 import vad.adler.sampleapp.newsapi.model.NewsServiceResponse
 import vad.adler.sampleapp.newsapi.view.ui.NewsViewModel
 
-class NewsListAdapter(private val newsListViewModel: NewsViewModel):
+class NewsListAdapter():
     RecyclerView.Adapter<NewsListAdapter.NewsListItemsViewHolder>() {
     var newsList: List<NewsServiceResponse.Article> = emptyList()
 
