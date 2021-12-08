@@ -24,8 +24,10 @@ class NewsListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         recyclerView = binding.newsRecyclerView
         with(binding) {
+//            viewmodel?.getLatestNews("tesla")
             adapter = NewsListAdapter()
             newsRecyclerView.adapter = adapter
         }

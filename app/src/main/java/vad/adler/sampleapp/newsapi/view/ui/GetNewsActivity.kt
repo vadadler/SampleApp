@@ -30,7 +30,5 @@ class GetNewsActivity : AppCompatActivity() {
 
         navController = Navigation.findNavController(this, R.id.navFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
-
-        //newsAPIViewModel.getLatestNews("Tesla", "publishedAt")
     }
 }

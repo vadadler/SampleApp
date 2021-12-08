@@ -17,11 +17,9 @@ class NewsViewModel @Inject constructor(): ViewModel() {
     private val scope = CoroutineScope(coroutineContext)
     val newsLiveData = MutableLiveData<MutableList<NewsServiceResponse.Article>>()
 
-    fun getLatestNews(query: String, sortBy: String) {
+    fun getLatestNews(query: String) {
         scope.launch {
-            val latestNews = newsRepository.getNews(query, sortBy)
-            val i = 0
-            //newsLiveData.postValue(latestNews)
+            val latestNews = newsRepository.getNews(query, "")
         }
     }
 
