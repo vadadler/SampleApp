@@ -26,7 +26,8 @@ class GetNewsActivity : AppCompatActivity() {
         (application as MyApplication).appComponent.inject(this)
         // Now MakeNewsApiCallViewModel is available.
 
-        binding = DataBindingUtil.setContentView(this, R.layout.make_news_api_call_activity)
+        //binding = DataBindingUtil.setContentView(this, R.layout.make_news_api_call_activity)
+        setContentView(R.layout.make_news_api_call_activity)
 
         navController = Navigation.findNavController(this, R.id.navFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
