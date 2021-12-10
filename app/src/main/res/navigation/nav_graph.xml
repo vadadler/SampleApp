@@ -6,7 +6,7 @@
     app:startDestination="@id/newsTopic">
 
     <fragment android:id="@+id/newsTopic"
-        android:name="vad.adler.sampleapp.NewsTopicFragment"
+        android:name="vad.adler.sampleapp.newsapi.view.NewsTopicFragment"
         android:label="@string/news_topic_fragment"
         tools:layout="@layout/fragment_news_topic">
 
